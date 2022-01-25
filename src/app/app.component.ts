@@ -1,15 +1,13 @@
 import { Component, VERSION } from '@angular/core';
-import { RandomService } from './host/random.service';
+import { RandomService, Service1, Service2 } from './content-host/random.service';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
+
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
-  randomNo;
-  constructor(private randomService: RandomService) {
-    this.randomNo = randomService.RandomNo;
-  }
+
 }
