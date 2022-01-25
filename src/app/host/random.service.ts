@@ -1,13 +1,18 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
+export class Service1 {
+  public info = 'service 1';
+}
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root',
 })
 export class RandomService {
   private _randomNo = 0;
 
   constructor() {
-    console.log("RandomService Constructed");
+    console.log('RandomService Constructed');
     this._randomNo = Math.floor(Math.random() * 1000 + 1);
   }
 

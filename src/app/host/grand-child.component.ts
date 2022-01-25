@@ -1,19 +1,22 @@
 import { Component, SkipSelf, Self, Optional, Host } from '@angular/core';
-import { RandomService } from './random.service';
+import { RandomService, Service1 } from './random.service';
 
 @Component({
   selector: 'my-grandChild',
   template: `
     <div class="box">
-      GrandChildComponent => {{ randomNo }}
+      GrandChildComponent => {{ randomNo  + service1.info}}
     </div>
   `,
-  providers: [],
+  providers: [Service1],
   viewProviders: [],
 })
 export class GrandChildComponent {
   randomNo;
-  constructor(@Host() private randomService: RandomService) {
+  constructor(
+    @Host() private randomService: RandomService,
+    @Host() public service1: Service1
+  ) {
     this.randomNo = randomService?.RandomNo;
   }
 }
