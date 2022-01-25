@@ -10,7 +10,10 @@ export class Service1 {
 export class Service2 {
   public info = ' (service 2) ';
 }
-
+@Injectable({ providedIn: 'root' })
+export class Service3 {
+  public info = ' (service 3) ';
+}
 @Injectable({
   providedIn: 'root',
 })
@@ -25,4 +28,13 @@ export class RandomService {
   get RandomNo() {
     return this._randomNo;
   }
+}
+
+@Injectable({ providedIn: 'root' })
+export class Service4 {
+  public info = ' (service 4) ';
+}
+@Injectable({ providedIn: 'root' })
+export class Service5 {
+  public info = ' (service 5) ';
 }

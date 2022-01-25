@@ -1,5 +1,5 @@
 import { Component, VERSION } from '@angular/core';
-import { RandomService, Service1, Service2 } from './content-host/random.service';
+import { RandomService, Service1, Service2 } from './content-host/services';
 
 @Component({
   selector: 'app-root',
